@@ -11,7 +11,7 @@ Now with this little adaption its very easy to implement a file upload field in 
 
 1. Install the package via composer
 ```bash
-composer require bytescommerce/easyadmin-file-upload-field
+composer require bytescommerce/easy-admin-file-upload-field
 ```
 
 2. Add a File Field to your EasyAdmin CRUD controller

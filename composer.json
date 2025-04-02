@@ -1,7 +1,7 @@
 {
     "name": "bytescommerce/easy-admin-file-upload-field",
     "description": "Adds a new field to easyAdmin",
-    "keywords": ["easyadmin", "easyadmin-bundle","file-upload", "file-upload-field", "easycorp", "easycorp/easyadmin-bundle"],
+    "keywords": ["easyadmin", "easyadmin-bundle","file-upload", "file-upload-field", "easycorp"],
     "type": "symfony-bundle",
     "homepage": "https://github.com/bytes-commerce/easy-admin-file-upload-field",
     "license": "MIT",
