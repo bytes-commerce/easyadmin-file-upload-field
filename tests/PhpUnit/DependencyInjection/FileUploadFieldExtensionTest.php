@@ -6,6 +6,7 @@ namespace BytesCommerce\FileUploadField\Tests\DependencyInjection;
 
 use BytesCommerce\FileUploadField\DependencyInjection\FileUploadFieldExtension;
 use BytesCommerce\FileUploadField\Field\Configurator\FileConfigurator;
+use BytesCommerce\FileUploadField\Field\FileField;
 use BytesCommerce\FileUploadField\Subscriber\TemplateRegisterSubscriber;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -27,6 +28,6 @@ final class FileUploadFieldExtensionTest extends TestCase
         );
 
         $this->assertTrue($container->hasDefinition(TemplateRegisterSubscriber::class), sprintf('The expected service "%s" is not defined.', TemplateRegisterSubscriber::class));
-        $this->assertTrue($container->hasDefinition(FileConfigurator::class), sprintf('The expected service "%s" is not defined.', FileConfigurator::class));
+        $this->assertTrue($container->hasDefinition(FileField::class), sprintf('The expected service "%s" is not defined.', FileField::class));
     }
 }
