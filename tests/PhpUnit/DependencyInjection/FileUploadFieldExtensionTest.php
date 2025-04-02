@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace BytesCommerce\FileUploadField\Tests\DependencyInjection;
 
 use BytesCommerce\FileUploadField\DependencyInjection\FileUploadFieldExtension;
-use BytesCommerce\FileUploadField\Field\Configurator\FileConfigurator;
 use BytesCommerce\FileUploadField\Field\FileField;
 use BytesCommerce\FileUploadField\Subscriber\TemplateRegisterSubscriber;
 use PHPUnit\Framework\TestCase;
@@ -24,7 +23,7 @@ final class FileUploadFieldExtensionTest extends TestCase
 
         $this->assertNotEmpty(
             $definitions,
-            'Expected at least one service definition to be added to the container.'
+            'Expected at least one service definition to be added to the container.',
         );
 
         $this->assertTrue($container->hasDefinition(TemplateRegisterSubscriber::class), sprintf('The expected service "%s" is not defined.', TemplateRegisterSubscriber::class));

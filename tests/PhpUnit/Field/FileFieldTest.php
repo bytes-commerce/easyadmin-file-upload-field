@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace BytesCommerce\FileUploadField\Tests\Field;
 
 use BytesCommerce\FileUploadField\Field\FileField;
-use EasyCorp\Bundle\EasyAdminBundle\Form\Type\FileUploadType;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Option\TextAlign;
+use EasyCorp\Bundle\EasyAdminBundle\Form\Type\FileUploadType;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Validator\Constraints\File;
 
