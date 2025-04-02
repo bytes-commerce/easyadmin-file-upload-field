@@ -1,0 +1,57 @@
+{
+    "name": "bytescommerce/easyadmin-file-upload-field",
+    "description": "Adds a new field to easyAdmin",
+    "type": "symfony-bundle",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Maximilian Graf Schimmelmann",
+            "email": "schimmelmann@bytes-commerce.de"
+        }
+    ],
+    "require": {
+        "easycorp/easyadmin-bundle": "^4",
+        "php": ">=8.2",
+        "symfony/framework-bundle": "^7",
+        "symfony/http-kernel": "^7",
+        "symfony/config": "^7",
+        "symfony/translation": "^7.2",
+        "symfony/event-dispatcher": "^7.2",
+        "symfony/console": "7.2.*",
+        "symfony/dotenv": "7.2.*",
+        "symfony/flex": "^2",
+        "symfony/yaml": "^7.2",
+        "symfony/asset": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "BytesCommerce\\FileUploadField\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BytesCommerce\\FileUploadField\\Tests\\": "tests/PhpUnit"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5",
+        "rector/rector": "^2.0",
+        "phpstan/phpstan": "^2.1"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0-dev"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        }
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
+    }
+}
