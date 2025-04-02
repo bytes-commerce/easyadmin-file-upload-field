@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 use BytesCommerce\FileUploadField\Field\Configurator\FileConfigurator;
+use BytesCommerce\FileUploadField\Field\FileField;
 use BytesCommerce\FileUploadField\Subscriber\TemplateRegisterSubscriber;
 
 return static function (ContainerConfigurator $container) {
@@ -13,11 +14,9 @@ return static function (ContainerConfigurator $container) {
         ->private();
 
     $services
-        ->set(TemplateRegisterSubscriber::class)
-        ->tag('kernel.event_subscriber');
+        ->set(FileField::class);
 
     $services
-        ->set(FileConfigurator::class)
-        ->arg(0, param('kernel.project_dir'))
-        ->tag('ea.field_configurator');
+        ->set(TemplateRegisterSubscriber::class)
+        ->tag('kernel.event_subscriber');
 };
